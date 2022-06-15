@@ -8,6 +8,8 @@ public class NewBehaviourScript : MonoBehaviour {
     public GameObject[] Levels;
     public GameObject ResetScreen, End;
 
+    public int wrong_res;
+
     int currentLevel;
 
 
@@ -29,10 +31,15 @@ public class NewBehaviourScript : MonoBehaviour {
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else
+        else if(currentLevel == Levels.Length)
         {
-            End.SetActive(true);
             Levels[currentLevel].SetActive(false);
+
+
+
+
         }
+        else
+            wrong_res++;
     }
 }
