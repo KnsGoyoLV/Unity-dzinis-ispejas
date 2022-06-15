@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour {
 
 
     public GameObject[] Levels;
-    public GameObject ResetScreen, End;
+    public GameObject End;
 
     public int wrong_res;
 
@@ -15,7 +16,23 @@ public class NewBehaviourScript : MonoBehaviour {
 
     public void wrongAnswer()
     {
-        ResetScreen.SetActive(true);
+        if (currentLevel + 1 != Levels.Length)
+        {
+            Levels[currentLevel].SetActive(false);
+            currentLevel++;
+            Levels[currentLevel].SetActive(true);
+
+            wrong_res++;
+        }
+        else
+        {
+            Levels[currentLevel].SetActive(false);
+            End.SetActive(true);
+
+
+
+        }
+
     }
 
     public void ResetGame()
@@ -31,15 +48,25 @@ public class NewBehaviourScript : MonoBehaviour {
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if(currentLevel == Levels.Length)
+        else
         {
             Levels[currentLevel].SetActive(false);
-
+            End.SetActive(true);
 
 
 
         }
-        else
-            wrong_res++;
     }
+
+
+    public Text ValueText;
+
+    void Update()
+    {
+        ValueText.text = wrong_res.ToString();
+    }
+
+
+
+
 }
