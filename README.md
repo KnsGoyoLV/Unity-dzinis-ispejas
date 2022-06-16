@@ -12,7 +12,7 @@ Github projekts satur:
 - [x] Unity Engine Tests ar 10 jautājumiem
 - [x] Unity Engine Background audio pievienots 
 - [x] Unity Engine Script
-- [?] Skolotājiem Aizsūtīt šo darbu
+- [x] Skolotājiem Aizsūtīt šo darbu
 
 ## Informacija/Pamacības Avoti:
 
