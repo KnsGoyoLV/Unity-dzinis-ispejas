@@ -8,7 +8,7 @@ Github projekts satur:
 
 ## TODO:
 - [x] README.md fails
-- [ ] Mācību materiāls par "Unity dzinis un tā nodrošinātās iespējas"
+- [x] Mācību materiāls par "Unity dzinis un tā nodrošinātās iespējas"
 - [x] Unity Engine Tests ar 10 jautājumiem
 - [x] Unity Engine Background audio pievienots 
 - [x] Unity Engine Script
